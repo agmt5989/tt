@@ -1,38 +1,9 @@
-ml>
-    <head>
-        <style>
-            .tt-input, .tt-hint, .twitter-typeahead {
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="remote">
-            <input class="typeahead" type="text" placeholder="Songs...">
-        </div>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/handlebars-v4.0.11.js"></script>
-        <script src="js/typeahead.0.10.5.bundle.min.js"></script>
-        <script>
-            $('#remote .typeahead').typeahead(
-                {
-                    hint: true,
-                    minLength: 3,
-                    highlight: false,
-                    limit: 5
-                }, {
-                    name: "song",
-                    displayKey: "id",
-                    source: function (query, callback) {
-                        $.getJSON("http://localhost:3000/search?query=" + query, function (data) {
-                            return callback(data);
-                        });
-                    },
-                    templates: {
-                        suggestion: Handlebars.compile('<div>{{title}} – {{artist}}</div>')
-                    }
-                }
-            );
-        </script>
-    </body>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
 </html>
