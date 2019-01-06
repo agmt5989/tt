@@ -25,6 +25,7 @@
 					limit: 5
 			}, {
 					name: "members",
+					displayKey: "id",
 					source: function (query, callback) {
 						$.getJSON("http://localhost:3001/findr?q=" + query, function (data) {
 							console.log(data);
