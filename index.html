@@ -24,7 +24,7 @@
 					highlight: true,
 					limit: 5
 			}, {
-					name: "song",
+					name: "members",
 					source: function (query, callback) {
 						$.getJSON("http://localhost:3001/findr?q=" + query, function (data) {
 						return callback(data);
