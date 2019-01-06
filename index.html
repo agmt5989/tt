@@ -27,6 +27,7 @@
 					name: "members",
 					source: function (query, callback) {
 						$.getJSON("http://localhost:3001/findr?q=" + query, function (data) {
+							console.log(data);
 						return callback(data);
 						});
 					},
