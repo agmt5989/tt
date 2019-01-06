@@ -27,12 +27,12 @@
 					name: "song",
 					displayKey: "id",
 					source: function (query, callback) {
-						$.getJSON("http://localhost:3000/search?query=" + query, function (data) {
+						$.getJSON("http://localhost:3001/findr?q=" + query, function (data) {
 						return callback(data);
 						});
 					},
 					templates: {
-					suggestion: Handlebars.compile('<div>{{title}} - {{artist}}</div>')
+					suggestion: Handlebars.compile('<div>{{email}} - {{fullname}}</div>')
 					}
 			}
 	);
