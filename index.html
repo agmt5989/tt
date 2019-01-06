@@ -15,7 +15,7 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/handlebars.js"></script>
-	<script src="js/typeahead.bundle.js"></script>
+	<script src="js/typeahead.latest.js"></script>
 	<script>
 	$('#remote .typeahead').typeahead(
 			{
@@ -33,7 +33,7 @@
 						});
 					},
 					templates: {
-					suggestion: Handlebars.compile('<div>{{email}}</div>')
+					suggestion: Handlebars.compile('<div>{{email}} - {{name.last}}</div>')
 					}
 			}
 	);
